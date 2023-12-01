@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>LaB-06</title>
+  </head>
+  <body>
+    <header class="bg-black text-white">
+      <nav class="flex justify-between">
+        <div>
+          <ul class="flex">
+            <li class="p-2"><a href="#">Trang Chủ</a></li>
+            <li class="p-2"><a href="#">Giới thiệu</a></li>
+            <li class="p-2"><a href="#">Bài viết</a></li>
+            <li class="p-2"><a href="#">Liên lạc</a></li>
+          </ul>
+        </div>
+        <div class="p-2">
+          <input type="text" name="search" id="search" placeholder="Tìm kiếm...">
+        </div>
+      </nav>
+    </header>
+    <main class="p-4">
+      <h1 class="font-bold text-[48px]">Ví dụ thao tác Javascript với HTML, CSS</h1>
+      <p>Nộ dung đang cập nhật...</p>
+      <button type="submit" class="px-5 py-2 border-spacing-2 rounded bg-blue-500 text-white">Login</button>
+      <button id="addEmployee" type="submit" class="px-5 py-2 border-spacing-2 rounded bg-blue-500 text-white">Add Employee</button>
+      <button id="showListEmployee" type="submit" class="px-5 py-2 border-spacing-2 rounded bg-blue-500 text-white">Show List Employee</button>
+      <button id="sortListEmployee" type="submit" class="px-5 py-2 border-spacing-2 rounded bg-blue-500 text-white">Sort List Employee</button>
+
+      <div id="divForm1" style="display: none;">
+        <form id="form1" class="w-[600px] flex flex-col justify-center m-auto bg-amber-300 my-4 border rounded-md p-2">
+          <h3 class="my-4 text-center">Nhập thông tin nhân viên</h3>
+
+          <div class="form-group flex flex-col justify-start space-y-2">
+            <label for="employeeID">ID</label>
+            <input id="employeeID" type="number" name="employeeID" placeholder="vd: 01">
+            <span class="form-message"></span>
+          </div>
+
+          <div class="form-group flex flex-col justify-start space-y-2">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" type="text" name="fullName" placeholder="vd: Nguyễn Văn A">
+            <span class="form-message"></span>
+          </div>
+  
+          <div class="form-group flex flex-col justify-start space-y-2">
+            <label for="baseSalary">Base Salary</label>
+            <input id="baseSalary" type="number" name="baseSalary" placeholder="vd: 3000">
+            <span class="form-message"></span>
+          </div>
+  
+          <div class="form-group flex flex-col justify-start space-y-2">
+            <label for="productSalary">Product Salary</label>
+            <input id="productSalary" type="number" name="productSalary" placeholder="vd: 4000">
+            <span class="form-message"></span>
+          </div>
+  
+          <div class="form-group flex flex-col justify-start space-y-2">
+            <label for="productQuantity">Product Quantity</label>
+            <input id="productQuantity" type="number" name="productQuantity" placeholder="7000">
+            <span class="form-message"></span>
+          </div>
+  
+          <button id="add" type="submit" class="bg-blue-500 px-2 py-2">Add</button>
+  
+        </form>
+      </div>
+
+      <table id="listEmployee" class="table-fixed bg-black text-white text-center" style="display: none;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Base Salary</th>
+            <th>Product Salary</th>
+            <th>Product Quantity</th>
+            <th>Total Salary</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
